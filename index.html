@@ -157,8 +157,7 @@
     #fotolove:hover {
       transform: scale(0.8);
     }
-    #akhiran,
-    #idkirim {
+    #akhiran {
       display: none;
       color: #ffa300;
       font-size: 16px;
@@ -170,8 +169,7 @@
       line-height: 10px;
       transition: all 0.2s ease;
     }
-    #akhiran:hover,
-    #idkirim:hover {
+    #akhiran:hover {
       transform: scale(0.9);
       opacity: 0.5;
     }
@@ -563,7 +561,7 @@
           hsementara();
         }
         if (ftom == 50) {
-          window.location.href = "test.html";
+          window.location.href = "pesan.html";
         }
       }
       function hsementara() {
@@ -679,11 +677,7 @@
         marquee.stop();
       }
       stopmq();
-      async function menuju() {
-        await swals.fire("OK!", "Kirim pesan ke WhatsApp aku, ya!", "success");
-        window.location =
-          "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;
-      }
+
       var aa = 0,
         akhirkata;
       akhirkata = "";
@@ -708,24 +702,7 @@
     </script>
 
     <script type="text/javascript">
-      async function jawab() {
-        var { value: jawaban } = await swals.fire({
-          title: "Isi Pesan Kamu",
-          input: "text",
-          allowOutsideClick: false,
-          showCancelButton: false,
-        });
-        if (jawaban && jawaban.length < 16) {
-          window.jawaban = jawaban;
-          pesanwhatsapp = jawaban;
-          menuju();
-        } else {
-          await swals.fire(
-            "Ups!",
-            "Kolom tidak boleh kosong atau lebih dari 15 karakter, ya!",
-          );
-        }
-      }
+
 
       async function pertama() {
         wallpaper.src = "img/Background.jpg";
