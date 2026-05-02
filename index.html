@@ -8,7 +8,7 @@
     href="https://fonts.gstatic.com"
     crossorigin
   /><link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Ubuntu:wght@400;700&display=swap"
     rel="stylesheet"
   />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
@@ -16,6 +16,7 @@
     src="https://kit.fontawesome.com/4f3ce16e3e.js"
     crossorigin="anonymous"
   ></script>
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
   <head>
     <title>Script HTML</title>
   </head>
@@ -26,6 +27,7 @@
       --bingkai: 14px;
       --warna-bingkai: rgba(255, 255, 255, 0.8);
       --gaya-font: "Josefin Sans", sans-serif;
+      --gaya-font2: "Ubuntu", sans-serif;
     }
     body {
       background-color: #101010;
@@ -53,6 +55,9 @@
     }
     #wallpaper {
       transition: all 3s ease;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     #beneranblur {
       position: fixed;
@@ -420,105 +425,168 @@
       outline: 0;
     }
 
-    .adB {
-      min-height: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* Styles for Pesan Content (Merged) */
+    #PesanContent {
+      display: none;
+      font-family: var(--gaya-font2);
+    }
+    #PesanContent blockquote {
+      width: 400px;
+      background: rgba(0, 0, 0, .75);
+      color: white;
+      padding: 25px;
+      border: 1px solid rgba(255, 255, 255, .8);
+      border-radius: 10px;
+      margin: 120px auto 0 auto;
+    }
+    #PesanContent p {
       font-size: 15px;
-      font-weight: 700;
-      color: #565656;
     }
-    .adB::before {
-      content: attr(data-text);
+    #PesanContent #suratin img {
+      display: inline-flex;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 10%;
+      padding: 10px;
+      width: 140px;
+      height: 110px;
+      transition: all .3s ease;
     }
-    a {
-      text-decoration: none;
+    #PesanContent #suratin img:hover { transform: scale(.9); }
+    #PesanContent #ket { margin-top: 30px; color: white; font-weight: 700; }
+    #PesanContent #Tombol2 {
+      opacity: 0; margin-top: 15px; display: flex; list-style: none; transform: scale(.1); transition: all 1s ease; justify-content: center; align-items: center;
     }
+    #PesanContent #Tombol2 a {
+      cursor: pointer; padding: 10px; border: 1px solid rgba(255, 255, 255, .8); border-radius: 10px; background: rgba(0, 0, 0, .75); color: white; font-size: 12px;
+    }
+    #Content2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+    .kumpulanstiker > img { display: none; }
   </style>
   <body>
     <div id="bodyblur">
-      <img id="wallpaper" src="" width="100%" height="100%" />
+      <img id="wallpaper" src="" />
       <div id="beneranblur"></div>
     </div>
 
-    <div id="Content">
-      <div>
-        <marquee id="imglewat" direction="right">
-          <img id="fotonimasi" src="" width="100px" height="100px" />
-        </marquee>
-      </div>
+    <!-- Index Page Content -->
+    <div id="IndexContent">
+      <div id="Content">
+        <div>
+          <marquee id="imglewat" direction="right">
+            <img id="fotonimasi" src="" width="100px" height="100px" />
+          </marquee>
+        </div>
 
-      <div>
-        <div id="pergeseran">
-          <!-- Pesan -->
-          <p>
-            <b
-              ><img src="img/bunga.gif" /><br />
-              <span>Hai Sayangkuu ❤️</span>
-            </b>
-          </p>
+        <div>
+          <div id="pergeseran">
+            <!-- Pesan -->
+            <p>
+              <b
+                ><img src="img/bunga.gif" /><br />
+                <span>Hai Sayangkuu ❤️</span>
+              </b>
+            </p>
 
-          <p>
-            <b
-              ><img src="img/cilukba.gif" /><br />
-              <span>Ciyee yang hari ini ultah 🤭</span>
-            </b>
-          </p>
+            <p>
+              <b
+                ><img src="img/cilukba.gif" /><br />
+                <span>Ciyee yang hari ini ultah 🤭</span>
+              </b>
+            </p>
 
-          <p>
-            <b
-              ><img src="img/g5.gif" /><br />
-              <span>Selamat Ulang Tahun sayangkuu! 🥳</span>
-            </b>
-          </p>
+            <p>
+              <b
+                ><img src="img/g5.gif" /><br />
+                <span>Selamat Ulang Tahun sayangkuu! 🥳</span>
+              </b>
+            </p>
 
-          <p>
-            <b
-              ><img src="img/mndkat.gif" /><br />
-              <span>Semoga Panjang Umur 🥰</span>
-            </b>
-          </p>
+            <p>
+              <b
+                ><img src="img/mndkat.gif" /><br />
+                <span>Semoga Panjang Umur 🥰</span>
+              </b>
+            </p>
 
-          <p>
-            <b
-              ><img src="img/gumush.gif" /><br />
-              <span>Tambah usia, tambah cantik, dan semoga tetap jadi tempat pulang paling nyaman buatku 🤩</span>
-            </b>
-          </p>
+            <p>
+              <b
+                ><img src="img/gumush.gif" /><br />
+                <span>Tambah usia, tambah cantik, dan semoga tetap jadi tempat pulang paling nyaman buatku 🤩</span>
+              </b>
+            </p>
 
-          <!-- Tombol Akhir -->
-          <p>
-            <b
-              ><img
-                id="fotolove"
-                src="img/giflove.gif"
-                onClick="akhiran();"
-              /><br />
-              <span>Oh iya, Coba Klik LOVE-nya</span>
-            </b>
-          </p>
+            <!-- Tombol Akhir -->
+            <p>
+              <b
+                ><img
+                  id="fotolove"
+                  src="img/giflove.gif"
+                  onClick="akhiran();"
+                /><br />
+                <span>Oh iya, Coba Klik LOVE-nya</span>
+              </b>
+            </p>
+          </div>
+        </div>
+
+        <p id="idgeser">Geser ya &#128073;</p>
+        <p id="idkalimat"></p>
+        <p id="idmarq"><marquee id="palingakhir"></marquee></p>
+
+        <!-- Tombol -->
+        <div id="Tombol">
+          <a onClick="multifungsi()">
+            <b id="tmbl">Geser &#128073;</b>
+          </a>
         </div>
       </div>
-
-      <p id="idgeser">Geser ya &#128073;</p>
-      <p id="idkalimat"></p>
-      <p id="idmarq"><marquee id="palingakhir"></marquee></p>
-
-      <!-- Tombol -->
-      <div id="Tombol">
-        <a onClick="multifungsi()">
-          <b id="tmbl">Geser &#128073;</b>
-        </a>
-      </div>
-
-
     </div>
+
+    <!-- Pesan Page Content (Merged) -->
+    <div id="PesanContent">
+      <div class="kumpulanstiker">
+        <img src="img/bunga (1).gif" id="fotoakhir1"/>
+        <img src="img/mndkat (1).gif" id="fotoakhir2"/>
+        <img src="img/cartoons.gif" id="fotoakhir3"/>
+        <img src="img/tinju.gif" id="fotoakhir4"/>
+      </div>
+      <div id="Content2" style="position:relative; opacity:0; margin-top:50px; width:100%; transition:all 1.3s ease;">
+        <div id="suratin" onClick="audio.play(); memulai2();">
+          <img src="img/envelope.png"/>
+        </div>
+        <p id="ket">Klik Suratnya!</p>
+        <div><img src="img/tos.gif" id="fotoakhir" style="display:none; width:110px; height:110px; border-radius:50%; background:white; padding:10px; margin:20px auto;" /></div>
+        <div><blockquote id="bq2">
+          <p id="kalimat2"></p>
+          <p id="kalimatc"></p>
+        </blockquote></div>
+        <div id="Tombol2">
+          <a onClick="sjawab2()"><b>Selesai</b></a>
+        </div>
+      </div>
+    </div>
+
     <script>
+      // Common variables
+      const body = document.querySelector("body");
+      const swals = Swal.mixin({ allowOutsideClick: false, cancelButtonColor: "#FF0040" });
+      const swalst = Swal.mixin({ allowOutsideClick: false, showConfirmButton: false, timer: 1000, timerProgressBar: true });
+      const swalst2 = Swal.mixin({ allowOutsideClick: false, showConfirmButton: false, timer: 3300, timerProgressBar: true, imageWidth: 100, imageHeight: 100 });
 
+      // Index variables
+      let ftom = 0;
+      let jikapr = 1;
+      let aa = 0;
+      let akhirkata = "";
+      let akhirkata2 = "";
 
-      ftom = 0;
-      jikapr = 1;
+      // Index functions
       function nongeser() {
         tombol();
         idgeser.style = "transform: scale(.1);opacity:0;";
@@ -527,19 +595,15 @@
       function showDiv() {
         setTimeout(kpemb, 100);
         setTimeout(nongeser, 1000);
-        document.getElementById("Content").style =
-          "opacity:1;margin-top:10vh;animation:none 3s infinite;";
-        document.getElementById("pergeseran").style =
-          "opacity:1;visibility:visible;";
+        document.getElementById("Content").style = "opacity:1;margin-top:10vh;animation:none 3s infinite;";
+        document.getElementById("pergeseran").style = "opacity:1;visibility:visible;";
       }
       function showAkhir() {
         setInterval(createHeart, 200);
-        document.getElementById("k2").style =
-          "opacity:1;transform:scale(1);margin:0;";
+        // document.getElementById("k2").style = "opacity:1;transform:scale(1);margin:0;"; // Removed as it conflicts
         document.getElementById("Content").style.display = "none";
       }
       function mulaiakhir() {
-        nonDiv();
         setTimeout(showAkhir, 500);
         setTimeout(finalis, 600);
       }
@@ -561,7 +625,7 @@
           hsementara();
         }
         if (ftom == 50) {
-          window.location.href = "pesan.html";
+          switchView();
         }
       }
       function hsementara() {
@@ -571,63 +635,15 @@
           setTimeout(tombol, 600);
         }
       }
-
-      var aa = 0,
-        pemb;
-      pemb = "";
-      var i = 0,
-        halo;
-      halo = "";
-      var u = 0,
-        text2;
-      text2 = "";
-      var o = 0,
-        text3;
-      text3 = "";
-      var a = 0,
-        final1;
-      final1 = "";
-      var ab = 0,
-        final2;
-      final2 = "";
       function kpemb() {
         document.getElementById("bodyblur").style = "opacity:.7;";
       }
       function finalis() {
-        document.getElementById("bq").style =
-          "opacity:1;visibility:visible;margin-top:0";
-        setTimeout(showTom, 4000);
+        // Updated to use unique ID
+        const bq = document.getElementById("bq");
+        if(bq) bq.style = "opacity:1;visibility:visible;margin-top:0";
+        // setTimeout(showTom, 4000); // showTom not defined in index
       }
-      const swals = Swal.mixin({
-        allowOutsideClick: false,
-        cancelButtonColor: "#FF0040",
-      });
-      const swalsy = Swal.mixin({
-        confirmButtonText: "Iya",
-        allowOutsideClick: false,
-      });
-      const swalst = Swal.mixin({
-        allowOutsideClick: false,
-        showConfirmButton: false,
-        timer: 1000,
-        timerProgressBar: true,
-        didOpen: () => {
-          Swal.showLoading();
-          const b = Swal.getHtmlContainer().querySelector("b");
-          timerInterval = setInterval(() => {
-            Swal.getTimerLeft();
-          }, 100);
-        },
-        willClose: () => {
-          clearInterval(timerInterval);
-        },
-      });
-      const style = document.createElement("style");
-      function play() {
-        var audio = new Audio("" + linkmp3);
-        audio.play();
-      }
-      const body = document.querySelector("body");
       function createHeart() {
         const heart = document.createElement("div");
         heart.className = "fas fa-heart";
@@ -635,95 +651,147 @@
         heart.style.animationDuration = Math.random() * 3 + 2 + "s";
         body.appendChild(heart);
       }
-      setInterval(function name(params) {
-        var heartArr = document.querySelectorAll(".fa-heart");
-        if (heartArr.length > 100) {
-          heartArr[0].remove();
-        }
+      setInterval(() => {
+        const heartArr = document.querySelectorAll(".fa-heart");
+        if (heartArr.length > 100) heartArr[0].remove();
       }, 100);
       function StartMarqueeL() {
         imglewat.style = "opacity:1;height:100px;";
-        var marquee = document.getElementById("imglewat");
-        marquee.start();
+        imglewat.start();
       }
-      function StopMarqueeL() {
-        var marquee = document.getElementById("imglewat");
-        marquee.stop();
-      }
-      StopMarqueeL();
       function akhiran() {
-
-        Tombol.style =
-          "transition:all .3s ease;opacity:0;transform: scale(.1);";
-        setTimeout(startmq, 4000);
+        Tombol.style = "transition:all .3s ease;opacity:0;transform: scale(.1);";
+        setTimeout(() => { palingakhir.start(); }, 4000);
         bodyblur.style = "opacity:.4;animation:none";
-        beneranblur.style =
-          "-webkit-backdrop-filter:blur(5px); backdrop-filter:blur(5px)";
+        beneranblur.style = "-webkit-backdrop-filter:blur(5px); backdrop-filter:blur(5px)";
         wallpaper.style = "transform: scale(1.6)";
         pergeseran.style = "display:none";
         StartMarqueeL();
         idgeser.innerHTML = "";
         idkalimat.innerHTML = akhirkata2;
-        idgeser.style =
-          "opacity:1;transform: scale(1);font-size:16px;font-weight:400;margin:0 30px;margin-top:15px;";
+        idgeser.style = "opacity:1;transform: scale(1);font-size:16px;font-weight:400;margin:0 30px;margin-top:15px;";
         setTimeout(aksiakhir, 800);
       }
-      function startmq() {
-        var marquee = document.getElementById("palingakhir");
-        marquee.start();
-      }
-      function stopmq() {
-        var marquee = document.getElementById("palingakhir");
-        marquee.stop();
-      }
-      stopmq();
-
-      var aa = 0,
-        akhirkata;
-      akhirkata = "";
       function aksiakhir() {
         if (aa < akhirkata.length) {
           idgeser.innerHTML += akhirkata.charAt(aa);
           aa++;
           setTimeout(aksiakhir, 65);
-        }
-        if (aa == akhirkata.length) {
-          idkalimat.style =
-            "opacity:1;transform: scale(1);font-size:16px;margin-top:20px";
+        } else {
+          idkalimat.style = "opacity:1;transform: scale(1);font-size:16px;margin-top:20px";
           setTimeout(showpalingakhir, 1100);
         }
       }
       function showpalingakhir() {
-        palingakhir.style =
-          "opacity:1;transform: scale(1);font-size:16px;margin-top:20px";
+        palingakhir.style = "opacity:1;transform: scale(1);font-size:16px;margin-top:20px";
         setTimeout(tombol, 4000);
-
       }
-    </script>
 
-    <script type="text/javascript">
+      // Transition function
+      function switchView() {
+        IndexContent.style.display = "none";
+        PesanContent.style.display = "block";
+        wallpaper.src = "https://feeldreams.github.io/wpjalanan.jpg";
+        wallpaper.style.transform = "scale(1)";
+        bodyblur.style = "opacity:1; animation:none;";
+        beneranblur.style = "-webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px)";
+        pertama2();
+      }
 
+      // Pesan functions (Renamed)
+      let katangetik, katangetik2;
+      let pesan1, pesan2, pesan3, pesan4;
 
+      function showDiv2() {
+        Content2.style = "opacity:1;margin-top:15vh;";
+        ket.style = "margin-top:30px";
+      }
+      function memulai2() {
+        suratin.style = "transition:all 1s ease;transform:scale(.1);opacity:0";
+        ket.style = "transition:all 1s ease;transform:scale(.1);opacity:0";
+        setTimeout(pesan_seq, 300);
+      }
+      function kpemb2() {
+        suratin.style = "display:none";
+        ket.style = "display:none";
+        fotoakhir.style = "display:block;transform:scale(1);";
+        Content2.style = "opacity:1;margin-top:2vh;";
+        bq2.style = "opacity:1;visibility:visible;margin-top:5px";
+        setTimeout(ngetik_pesan, 500);
+      }
+      function tombol2() {
+        Tombol2.style = "margin-top:15px;opacity:1;transform: scale(1);";
+      }
+      function sjawab2() {
+        jawab2();
+      }
+      function ngetik_pesan() {
+        new TypeIt("#kalimat2", {
+          strings: ["" + katangetik], startDelay: 50, speed: 55, cursor: true,
+          afterComplete: function(){
+            kalimat2.innerHTML = katangetik;
+            kalimatc.style = "margin-top:30px;margin-bottom:10px";
+            setTimeout(ngetik2_pesan, 500);
+          },
+        }).go();
+      }
+      function ngetik2_pesan() {
+        new TypeIt("#kalimatc", {
+          strings: ["" + katangetik2], startDelay: 50, speed: 55, cursor: true,
+          afterComplete: function(){
+            kalimatc.innerHTML = katangetik2;
+            setTimeout(tombol2, 300);
+          },
+        }).go();
+      }
+      async function jawab2() {
+        await swals.fire('Terima kasih!', 'Semoga harimu menyenangkan! :)', 'success');
+        window.close();
+        setTimeout(function() {
+          window.location.href = "about:blank";
+        }, 500);
+      }
+      async function pertama2() {
+        setTimeout(showDiv2, 100);
+      }
+      async function pesan_seq() {
+        await swalst2.fire({ title: '' + pesan1, imageUrl: '' + fotoakhir1.src });
+        await swalst2.fire({ title: '' + pesan2, imageUrl: '' + fotoakhir2.src });
+        await swalst2.fire({ title: '' + pesan3, imageUrl: '' + fotoakhir3.src });
+        await swalst2.fire({ title: '' + pesan4, imageUrl: '' + fotoakhir4.src });
+        setTimeout(kpemb2, 300);
+      }
+
+      // Initialize
       async function pertama() {
         wallpaper.src = "img/Background.jpg";
         fotonimasi.src = "img/nimasi.gif";
-        audio = new Audio("https://feeldreams.github.io/anotherme.mp3");
+        audio = new Audio("song/Happy Birthday - Brian Rahmattio.mp3");
+        audio.load();
+        audio.loop = true;
 
-        akhirkata =
-          "Semoga di hari spesialmu ini, kamu menjadi pribadi yang lebih baik yaaa 🥳      ";
+        akhirkata = "Semoga di hari spesialmu ini, kamu menjadi pribadi yang lebih baik yaaa 🥳      ";
         akhirkata2 = "Happy Birthday!!!";
         palingakhir.innerHTML = "Jangan lupa traktirannya! 🤣";
+
+        pesan1 = "Hai Kamu 🥰";
+        pesan2 = "Semangat Jalani Harinya yaa 🤩";
+        pesan3 = "Jaga Kesehatanmu 😍";
+        pesan4 = "Jangan Sampe Sakit! 😡";
+        katangetik = "Makasih udah mau bukain yaaaa ><";
+        katangetik2 = "I LOVE YOU ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️";
 
         await swalst.fire("Tunggu");
         lanjut();
       }
-      pertama();
 
       async function lanjut() {
         await swals.fire("Selamat datang!", "Sekarang lihat ini ya :)");
         showDiv();
         audio.play();
       }
+
+      pertama();
     </script>
   </body>
 </html>
