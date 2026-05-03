@@ -18,7 +18,7 @@
   ></script>
   <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
   <head>
-    <title>Script HTML</title>
+    <title>Happy Birthday</title>
   </head>
   <style>
     :root {
@@ -545,7 +545,7 @@
         height: auto;
       }
       #Content2 {
-        margin-top: 0 !important;
+        margin-top: 10vh;
       }
       #PesanContent blockquote {
         margin: 5px auto 0 auto;
@@ -676,6 +676,7 @@
       let aa = 0;
       let akhirkata = "";
       let akhirkata2 = "";
+      let akhirkata3 = "";
 
       // Index functions
       function nongeser() {
@@ -794,8 +795,9 @@
       let pesan1, pesan2, pesan3, pesan4;
 
       function showDiv2() {
-        Content2.style = "opacity:1;margin-top:15vh;";
-        ket.style = "margin-top:30px";
+        Content2.style.opacity = "1";
+        Content2.style.marginTop = "25vh";
+        ket.style.marginTop = "30px";
       }
       function memulai2() {
         suratin.style = "transition:all 1s ease;transform:scale(.1);opacity:0";
@@ -807,8 +809,11 @@
         ket.style = "display:none";
         fotoakhir.style.display = "block";
         fotoakhir.style.transform = "scale(1)";
-        Content2.style = "opacity:1;margin-top:2vh;";
-        bq2.style = "opacity:1;visibility:visible;margin-top:5px";
+        Content2.style.opacity = "1";
+        Content2.style.marginTop = "2vh";
+        bq2.style.opacity = "1";
+        bq2.style.visibility = "visible";
+        bq2.style.marginTop = "5px";
         setTimeout(ngetik_pesan, 500);
       }
       function tombol2() {
@@ -862,14 +867,15 @@
         audio.load();
         audio.loop = true;
 
-        akhirkata = "Semoga di hari spesialmu ini, kamu menjadi pribadi yang lebih baik yaaa 🥳      ";
-        akhirkata2 = "Happy Birthday!!!";
-        palingakhir.innerHTML = "Jangan lupa traktirannya! 🤣";
+        akhirkata = "Semoga di hari spesialmu ini, kamu semakin tumbuh jadi pribadi yang lebih baik, makin kuat, dan makin bahagia. Aku selalu doakan yang terbaik buat kamu, karena kamu sepenting itu buatku. 🥳";
+        akhirkata2 = "Happy Birthday, Sayang!!!";
+        akhirkata3 = "Ada satu pesan lagi nih buat kamu…";
+        palingakhir.innerHTML = akhirkata3;
 
-        pesan1 = "Hai Kamu 🥰";
-        pesan2 = "Semangat Jalani Harinya yaa 🤩";
-        pesan3 = "Jaga Kesehatanmu 😍";
-        pesan4 = "Jangan Sampe Sakit! 😡";
+        pesan1 = "Hai Sayangkuu 🥰";
+        pesan2 = "Semoga kamu makin sayang sama aku, makin perhatian 🤩";
+        pesan3 = "Dan makin nurut juga sama aku 😍";
+        pesan4 = "Awas aja kalo ngga nurut! 😡";
         katangetik = "“Selamat ulang tahun, sayang. Dari sekian banyak hal yang pernah aku miliki dalam hidup, kamu adalah yang paling ingin aku jaga. Kamu bukan cuma pacarku, kamu rumah yang selalu aku tuju, alasan kenapa aku bertahan, dan satu nama yang selalu aku sebut dalam diam tanpa orang lain tahu.<br><br>Sejak kamu ada, hidupku nggak lagi sama. Bukan karena semuanya jadi sempurna, tapi karena aku punya kamu untuk dilalui bersama. Hal-hal kecil terasa besar, hari-hari biasa jadi punya arti, dan bahkan di saat terberat pun, aku tetap punya alasan untuk kuat—karena ada kamu di ujungnya.<br><br>Di ulang tahun kamu ini, aku nggak cuma berharap kamu bahagia. Aku berharap kamu merasa dicintai sepenuhnya, tanpa ragu, tanpa takut. Aku ingin kamu tahu kalau kamu punya tempat yang aman di aku—tempat di mana kamu bisa jadi diri sendiri, tanpa harus pura-pura kuat.<br><br>Aku nggak janji hubungan kita akan selalu mudah. Tapi aku janji akan tetap bertahan, tetap milih kamu, dan tetap ada… bahkan di saat kamu lagi nggak baik-baik saja. Aku nggak mau cuma jadi bagian dari cerita kamu, aku mau jadi seseorang yang tetap ada sampai cerita itu selesai.<br><br>Terima kasih sudah jadi milikku, dan terima kasih sudah bertahan sejauh ini sama aku. Semoga di umur kamu yang sekarang, semua yang kamu impikan perlahan jadi nyata, dan semoga aku masih terus ada di samping kamu, hari ini, besok, dan seterusnya.<br><br>Selamat ulang tahun, cinta. Aku sayang kamu, lebih dari yang bisa aku jelaskan dengan kata-kata.”";
         katangetik2 = "I LOVE YOU ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️";
 
@@ -878,7 +884,14 @@
       }
 
       async function lanjut() {
-        await swals.fire("Selamat datang!", "Sekarang lihat ini ya :)");
+        await swals.fire({
+          title: 'Halo Sayangkuu! ❤️',
+          html: 'Tolong <b>besarkan volumenya</b> dan <b>cerahkan layarnya</b> yaa, biar makin terasa suasananya... ✨',
+          imageUrl: 'img/bunga.gif',
+          imageWidth: 120,
+          imageHeight: 120,
+          confirmButtonText: 'Buka Sekarang ✨',
+        });
         showDiv();
         audio.play();
       }
