@@ -185,11 +185,11 @@
       transition: all 2s ease;
       display: flex;
       flex-wrap: nowrap;
-      align-items: flex-start;
+      align-items: center;
       justify-content: flex-start;
       position: relative;
       max-width: 500px;
-      padding: 0 20px;
+      padding: 30px 20px;
       overflow-y: hidden;
       overflow-x: scroll;
       scroll-behavior: smooth;
@@ -197,27 +197,44 @@
       -ms-overflow-style: none;
       -webkit-overflow-scrolling: touch;
     }
+    #pergeseran::-webkit-scrollbar { display: none; }
+
     #pergeseran p {
-      background: var(--warna-bg);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       color: var(--warna-teks);
-      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
-      border-left: 2px solid var(--warna-bingkai);
-      border-right: 2px solid var(--warna-bingkai);
-      border-radius: 0;
-      padding: 8px;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 20px;
       display: flex;
-      flex-wrap: nowrap;
+      flex-direction: column;
       text-align: center;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 700;
-      line-height: 1.4em;
+      line-height: 1.5em;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      width: 90%;
-      height: 150px;
+      width: 85%;
+      min-height: 200px;
       margin: 0 15px 0 0;
       scroll-snap-align: center;
+      scroll-snap-stop: always;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      transition: all 0.3s ease;
+    }
+    #pergeseran p:hover {
+      transform: translateY(-5px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.15);
+    }
+    #pergeseran p b img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
     }
     #pergeseran > *:last-child {
       margin-right: 0;
@@ -363,28 +380,31 @@
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      margin: 0;
-      margin: 12px 0 12px 0;
-      transition: all 0.2s ease;
-      padding: 10px;
+      margin: 12px 0;
+      transition: all 0.3s ease;
+      padding: 12px 30px;
       outline: 0;
-      border-left: 2px solid var(--warna-bingkai);
-      border-right: 2px solid var(--warna-bingkai);
-      border-radius: 0;
-      line-height: 15px;
-      background: var(--warna-bg);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
       color: var(--warna-teks);
       font-size: 14px;
-      font-weight: 400;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       white-space: nowrap;
       overflow: hidden;
       z-index: 1;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
     #Tombol a:hover {
-      border-left: 4px solid var(--warna-bingkai);
-      border-right: 4px solid var(--warna-bingkai);
-      transform: scale(0.9);
-      opacity: 0.98;
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1) translateY(-3px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+      opacity: 1;
     }
 
     .swal2-title {
@@ -457,7 +477,26 @@
       opacity: 0; margin-top: 15px; display: flex; list-style: none; transform: scale(.1); transition: all 1s ease; justify-content: center; align-items: center;
     }
     #PesanContent #Tombol2 a {
-      cursor: pointer; padding: 10px; border: 1px solid rgba(255, 255, 255, .8); border-radius: 10px; background: rgba(0, 0, 0, .75); color: white; font-size: 12px;
+      cursor: pointer;
+      padding: 12px 30px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    #PesanContent #Tombol2 a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1) translateY(-3px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
     }
     #Content2 {
       display: flex;
@@ -709,7 +748,7 @@
       function memulai2() {
         suratin.style = "transition:all 1s ease;transform:scale(.1);opacity:0";
         ket.style = "transition:all 1s ease;transform:scale(.1);opacity:0";
-        setTimeout(pesan_seq, 300);
+        setTimeout(pesan_seq, 700);
       }
       function kpemb2() {
         suratin.style = "display:none";
@@ -727,7 +766,7 @@
       }
       function ngetik_pesan() {
         new TypeIt("#kalimat2", {
-          strings: ["" + katangetik], startDelay: 50, speed: 55, cursor: true,
+          strings: ["" + katangetik], startDelay: 50, speed: 55, cursor: true, html: true,
           afterComplete: function(){
             kalimat2.innerHTML = katangetik;
             kalimatc.style = "margin-top:30px;margin-bottom:10px";
@@ -737,7 +776,7 @@
       }
       function ngetik2_pesan() {
         new TypeIt("#kalimatc", {
-          strings: ["" + katangetik2], startDelay: 50, speed: 55, cursor: true,
+          strings: ["" + katangetik2], startDelay: 50, speed: 55, cursor: true, html: true,
           afterComplete: function(){
             kalimatc.innerHTML = katangetik2;
             setTimeout(tombol2, 300);
@@ -778,7 +817,7 @@
         pesan2 = "Semangat Jalani Harinya yaa 🤩";
         pesan3 = "Jaga Kesehatanmu 😍";
         pesan4 = "Jangan Sampe Sakit! 😡";
-        katangetik = "Makasih udah mau bukain yaaaa ><";
+        katangetik = "“Selamat ulang tahun, sayang. Dari sekian banyak hal yang pernah aku miliki dalam hidup, kamu adalah yang paling ingin aku jaga. Kamu bukan cuma pacarku, kamu rumah yang selalu aku tuju, alasan kenapa aku bertahan, dan satu nama yang selalu aku sebut dalam diam tanpa orang lain tahu.<br><br>Sejak kamu ada, hidupku nggak lagi sama. Bukan karena semuanya jadi sempurna, tapi karena aku punya kamu untuk dilalui bersama. Hal-hal kecil terasa besar, hari-hari biasa jadi punya arti, dan bahkan di saat terberat pun, aku tetap punya alasan untuk kuat—karena ada kamu di ujungnya.<br><br>Di ulang tahun kamu ini, aku nggak cuma berharap kamu bahagia. Aku berharap kamu merasa dicintai sepenuhnya, tanpa ragu, tanpa takut. Aku ingin kamu tahu kalau kamu punya tempat yang aman di aku—tempat di mana kamu bisa jadi diri sendiri, tanpa harus pura-pura kuat.<br><br>Aku nggak janji hubungan kita akan selalu mudah. Tapi aku janji akan tetap bertahan, tetap milih kamu, dan tetap ada… bahkan di saat kamu lagi nggak baik-baik saja. Aku nggak mau cuma jadi bagian dari cerita kamu, aku mau jadi seseorang yang tetap ada sampai cerita itu selesai.<br><br>Terima kasih sudah jadi milikku, dan terima kasih sudah bertahan sejauh ini sama aku. Semoga di umur kamu yang sekarang, semua yang kamu impikan perlahan jadi nyata, dan semoga aku masih terus ada di samping kamu, hari ini, besok, dan seterusnya.<br><br>Selamat ulang tahun, cinta. Aku sayang kamu, lebih dari yang bisa aku jelaskan dengan kata-kata.”";
         katangetik2 = "I LOVE YOU ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️";
 
         await swalst.fire("Tunggu");
