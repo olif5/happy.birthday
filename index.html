@@ -543,10 +543,14 @@
         margin-top: 5vh !important;
       }
       #PesanContent blockquote {
-        margin: 10px auto 0 auto;
-        width: 90%;
-        font-size: 13px;
-        padding: 10px 15px;
+        margin: 5px auto 0 auto;
+        width: 95%;
+        padding: 8px 12px;
+      }
+      #PesanContent blockquote p {
+        font-size: 12px;
+        line-height: 1.3em;
+        margin: 5px 0;
       }
     }
   </style>
@@ -643,7 +647,7 @@
           <img src="img/envelope.png"/>
         </div>
         <p id="ket">Klik Suratnya!</p>
-        <div><img src="img/tos.gif" id="fotoakhir" style="display:none; width:100px; height:100px; border-radius:50%; background:white; padding:10px; margin:10px auto;" /></div>
+        <div><img src="img/tos.gif" id="fotoakhir" style="display:none; width:80px; height:80px; border-radius:50%; background:white; padding:8px; margin:5px auto;" /></div>
         <div><blockquote id="bq2">
           <p id="kalimat2"></p>
           <p id="kalimatc"></p>
@@ -773,7 +777,7 @@
       function switchView() {
         IndexContent.style.display = "none";
         PesanContent.style.display = "block";
-        wallpaper.src = "https://feeldreams.github.io/wpjalanan.jpg";
+        wallpaper.src = "img/Background2.jpg";
         wallpaper.style.transform = "scale(1)";
         bodyblur.style = "opacity:1; animation:none;";
         beneranblur.style = "-webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px)";
