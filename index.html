@@ -508,6 +508,11 @@
       justify-content: center;
     }
     .kumpulanstiker > img { display: none; }
+    #fotoakhir {
+      width: 30px;
+      height: 30px;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    }
 
     /* Responsivitas untuk Mobile */
     @media screen and (max-width: 600px) {
@@ -647,7 +652,7 @@
           <img src="img/envelope.png"/>
         </div>
         <p id="ket">Klik Suratnya!</p>
-        <div><img src="img/tos.gif" id="fotoakhir" style="display:none; width:50px; height:50px; margin:5px auto; filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));" /></div>
+        <div><img src="img/tos.gif" id="fotoakhir" style="display:none; margin:2px auto;" /></div>
         <div><blockquote id="bq2">
           <p id="kalimat2"></p>
           <p id="kalimatc"></p>
@@ -800,7 +805,8 @@
       function kpemb2() {
         suratin.style = "display:none";
         ket.style = "display:none";
-        fotoakhir.style = "display:block;transform:scale(1);";
+        fotoakhir.style.display = "block";
+        fotoakhir.style.transform = "scale(1)";
         Content2.style = "opacity:1;margin-top:2vh;";
         bq2.style = "opacity:1;visibility:visible;margin-top:5px";
         setTimeout(ngetik_pesan, 500);
